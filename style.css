@@ -1,0 +1,144 @@
+:root {
+  --primary-color: rgb(122, 133, 138);
+  --secondary-color: rgb(75, 87, 92);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  transition: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+  transition: all 0.8s ease-in;
+}
+
+header {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  align-items: center;
+}
+
+ul {
+  margin-left: 2rem;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  margin: 0.5rem 1rem;
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+ul li.active {
+  background-color: rgb(194, 194, 194);
+  color: black;
+}
+
+ul li:hover {
+  transition: 0.3s ease;
+  background-color: var(--primary-color);
+}
+
+input {
+  margin-right: 6rem;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  color: white;
+  font-family: inherit;
+  padding: 2px 10px;
+}
+
+input::placeholder {
+  color: var(--primary-color);
+}
+
+input:focus {
+  outline: none;
+}
+
+main {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s linear;
+}
+
+.card {
+  width: 300px;
+  height: 537.03px;
+  background-color: var(--secondary-color);
+  margin: 1rem;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-info {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.card-info span {
+  padding: 0.75rem 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-info span.green {
+  background-color: rgb(3, 179, 3);
+}
+
+.card-info span.orange {
+  background-color: rgb(216, 140, 0);
+}
+
+.card-info span.red {
+  background-color: rgb(202, 1, 1);
+}
+
+.overview {
+  background-color: rgb(206, 205, 205);
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(101%);
+  max-height: 100%;
+  transition: 0.3s ease-in;
+}
+
+.card:hover .overview {
+  transform: translateY(0);
+}
